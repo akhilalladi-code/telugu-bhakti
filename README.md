@@ -1,10 +1,17 @@
 # Telugu Bhakti
 
-A multi-page Telugu devotional website covering bhajans, stotras, devotional traditions and song guides.
+A static Telugu devotional lyrics library with searchable song listings, full song pages, copy/print tools and deity/category collections.
 
 ## Planned live URL
 
 https://akhilalladi-code.github.io/telugu-bhakti/
+
+## Development
+
+- Read `AGENTS.md` before making changes.
+- Search index: `data/songs.json`.
+- Run `node --check assets/site.js` and `python scripts/check_site.py` before submitting changes.
+- Pull requests to `main` run quality checks. Production deployment runs only after checks pass on `main`.
 
 ## Structure
 
@@ -12,7 +19,8 @@ https://akhilalladi-code.github.io/telugu-bhakti/
 - `/kasturi-ranga-ranga-lyrics/` — Featured song guide
 - `/krishna/`, `/rama/`, `/shiva/`, `/devi/`, `/vinayaka/` — Deity collections
 - `/bhajans/`, `/stotras/`, `/deities/` — Content hubs
-- `/about/`, `/contact/`, `/privacy/` — Site information
+- `/about/`, `/contact/`, `/privacy/`, `/terms/`, `/faq/` — Site information
+- `/404.html` — Not-found page
 
 ## SEO foundation
 
