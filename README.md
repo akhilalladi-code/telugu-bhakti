@@ -4,7 +4,7 @@ A multi-page Telugu devotional website covering bhajans, stotras, devotional tra
 
 ## Planned live URL
 
-https://akhilalladi-code.github.io/telugu-bhakti-/
+https://akhilalladi-code.github.io/telugu-bhakti/
 
 ## Structure
 
