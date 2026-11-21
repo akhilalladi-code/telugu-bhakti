@@ -40,3 +40,75 @@
 .search-result strong{display:block;font:600 19px 'Anek Telugu',sans-serif;color:var(--green)}
 .search-result small{display:block;color:var(--muted);font-size:12px;margin-top:5px}
 @media(max-width:600px){.song-search{padding:48px 7vw}.search-control{flex-direction:column}.search-control button{padding:12px}.search-results{grid-template-columns:1fr}}
+
+/* Editorial refinement — less template-like, more literary and human */
+:root{--paper:#f7f4ec;--ink:#28291f;--muted:#747166;--green:#294a39;--green2:#49644d;--saffron:#a66a35;--line:#ded8ca;--white:#fffdf8}
+body{font-family:'Anek Telugu','DM Sans',sans-serif;letter-spacing:0}
+.site-header{height:76px;background:rgba(247,244,236,.96);backdrop-filter:blur(8px)}
+.brand{font-family:'Anek Telugu',sans-serif}
+.nav{font-family:'DM Sans','Anek Telugu',sans-serif;gap:28px}
+.nav a{transition:color .18s ease}
+.hero{min-height:560px;padding:74px 9vw 68px;gap:6vw;background:var(--paper)}
+.hero h1{font-size:clamp(44px,5.8vw,72px);line-height:1.42;letter-spacing:-1px;font-weight:600}
+.hero-lede{font-size:20px;line-height:1.85;max-width:500px}
+.hero-en{font-size:13px;line-height:1.8}
+.hero-art{height:390px;border-radius:0;background:#e9e2d3;border:1px solid #d8cbb4;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.hero-art:before,.hero-art:after{content:"";position:absolute;inset:18px;border:1px solid rgba(125,92,52,.35);pointer-events:none}
+.hero-art:after{inset:26px;border-color:rgba(125,92,52,.18)}
+.hero-art-top,.hero-art-bottom{position:absolute;z-index:2;font-size:10px;letter-spacing:2px;color:#6b654f}
+.hero-art-top{top:43px}
+.hero-art-bottom{bottom:40px;font-family:'DM Sans',sans-serif;font-size:8px;letter-spacing:2.2px}
+.hero-art-symbol{font-family:'Anek Telugu',serif;font-size:clamp(100px,15vw,170px);line-height:1;color:#9b6037;opacity:.92;text-shadow:2px 3px 0 rgba(255,255,255,.4)}
+.hero-art-title{font-size:23px;line-height:1.8;text-align:center;color:#334b38;margin-top:8px;z-index:1}
+.sun,.temple,.art-caption{display:none}
+.eyebrow{font-family:'DM Sans','Anek Telugu',sans-serif;font-size:9px;letter-spacing:2px}
+.button{font-family:'Anek Telugu',sans-serif;border-radius:2px}
+.intro{padding:82px 24px 72px}
+.intro h2,.closing h2{line-height:1.55;font-weight:600}
+.intro>p:last-child,.closing>p:last-child{font-family:'Anek Telugu',sans-serif;font-size:16px;line-height:2;max-width:670px;margin-left:auto;margin-right:auto}
+.section{padding:72px 9vw 80px;background:#f0ede4}
+.section-head{align-items:end}
+.section-head h2,.feature h2{font-weight:600}
+.section-head>p{font-family:'Anek Telugu',sans-serif}
+.featured-song-card{display:grid;grid-template-columns:74px 1fr auto;align-items:center;gap:22px;padding:25px 28px;background:#fffdf8;border:1px solid #dcd4c4;transition:border-color .2s,transform .2s}
+.featured-song-card:hover{border-color:#a66a35;transform:translateY(-2px)}
+.featured-song-index{font-family:'DM Sans',sans-serif;font-size:27px;color:#b28a5c}
+.featured-song-main{display:flex;flex-direction:column}
+.featured-song-kicker{font-size:12px;color:#9a6b3d}
+.featured-song-main strong{font-family:'Anek Telugu',sans-serif;font-size:27px;font-weight:600;color:#2c4937}
+.featured-song-main small{font-size:12px;color:#777367}
+.featured-song-arrow{font-family:'Anek Telugu',sans-serif;font-size:13px;color:#34513d}
+.editorial-note{font-size:13px;color:#777367;margin:16px 0 0;line-height:1.9}
+.collections{padding:76px 9vw;background:#faf8f1}
+.collections-heading{max-width:670px;margin-bottom:30px}
+.collections-heading h2{font-family:'Anek Telugu',sans-serif;font-size:34px;margin:0 0 8px}
+.collections-heading>p:last-child{color:var(--muted);font-size:14px;line-height:1.9}
+.collection-links{border-top:1px solid var(--line)}
+.collection-links a{display:grid;grid-template-columns:58px 1fr 1.1fr 24px;align-items:center;gap:18px;padding:20px 8px;border-bottom:1px solid var(--line);transition:padding .18s,color .18s}
+.collection-links a:hover{padding-left:15px;color:var(--saffron)}
+.collection-links a>span{font:12px 'DM Sans',sans-serif;color:#a78a66}
+.collection-links strong{font:600 20px 'Anek Telugu',sans-serif}
+.collection-links small{font:13px 'Anek Telugu',sans-serif;color:var(--muted)}
+.collection-links b{font:18px 'DM Sans',sans-serif;font-weight:400}
+.closing{padding:85px 24px 90px}
+.text-link{font-family:'Anek Telugu',sans-serif;color:var(--green);border-color:#b8a98e}
+.footer{gap:22px}
+.footer>div a{font-family:'Anek Telugu',sans-serif}
+@media(max-width:760px){
+ .hero{padding:52px 7vw 45px;gap:30px}
+ .hero-art{height:290px}
+ .hero-art-symbol{font-size:120px}
+ .featured-song-card{grid-template-columns:42px 1fr;gap:12px;padding:20px}
+ .featured-song-arrow{grid-column:2}
+ .collection-links a{grid-template-columns:36px 1fr 22px;gap:10px}
+ .collection-links small{grid-column:2;grid-row:2}
+ .collection-links b{grid-column:3;grid-row:1/3}
+}
+@media(max-width:480px){
+ .hero h1{font-size:43px}
+ .hero-art-top{font-size:8px}
+ .collections{padding:58px 7vw}
+ .collections-heading h2{font-size:29px}
+ .featured-song-main strong{font-size:23px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
