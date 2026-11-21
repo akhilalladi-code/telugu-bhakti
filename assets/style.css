@@ -21,3 +21,34 @@
 .lyrics-page{max-width:920px;margin:0 auto;padding:42px 24px 90px}.lyrics-toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:22px}.lyrics-toolbar h2{font-size:25px;margin:0 0 5px}.lyrics-toolbar p,.lyrics-source{font-size:13px;color:#746b5d;margin:0}.lyrics-actions{display:flex;gap:9px;flex-wrap:wrap}.lyrics-button{border:1px solid var(--green);background:var(--green);color:white;padding:11px 17px;border-radius:25px;font:600 13px 'Anek Telugu',sans-serif;cursor:pointer}.lyrics-button.secondary{background:transparent;color:var(--green)}.lyrics-paper{background:#fffefa;border:1px solid #eee0c9;padding:clamp(22px,5vw,54px);box-shadow:0 12px 35px rgba(45,42,32,.06)}.lyrics-paper-heading{display:flex;justify-content:space-between;gap:12px;padding-bottom:18px;margin-bottom:24px;border-bottom:1px solid #eee0c9;color:#8a795c;font-size:11px;letter-spacing:.08em}.song-lyrics{white-space:pre-wrap;overflow-wrap:anywhere;font-family:'Ramabhadra','Anek Telugu',sans-serif;font-size:clamp(16px,2vw,18px);line-height:2.05;color:#30362e;margin:0;text-align:center}.lyrics-source{line-height:1.8;margin:22px 0 10px}.lyrics-source a,.lyrics-feedback a{color:var(--green);text-decoration:underline;text-underline-offset:3px}.lyrics-feedback{font-size:13px;margin-top:15px}
 @media(max-width:600px){.lyrics-page{padding:30px 16px 65px}.lyrics-toolbar{align-items:flex-start}.lyrics-actions{width:100%}.lyrics-button{flex:1}.lyrics-paper{padding:22px 15px}.song-lyrics{font-size:16px;line-height:1.95}.lyrics-paper-heading{font-size:10px}}
 @media print{.site-header,.footer,.lyrics-hero,.lyrics-toolbar,.lyrics-feedback{display:none!important}.lyrics-page{max-width:none;padding:0}.lyrics-paper{border:0;box-shadow:none;padding:0}.song-lyrics{font-size:12pt;line-height:1.8}.lyrics-source{font-size:9pt}}
+
+
+/* Distinct devotional artwork atlas: each section uses its own artwork cell. */
+.devotional-sprite{background-image:url("devotional-atlas.jpg?v=20261121-3");background-repeat:no-repeat;background-size:300% 300%;background-color:#ead7ae}
+.art-krishna{background-position:0% 0%}
+.art-rama{background-position:50% 0%}
+.art-shiva{background-position:100% 0%}
+.art-devi{background-position:0% 50%}
+.art-vinayaka{background-position:50% 50%}
+.art-music{background-position:100% 50%}
+.art-dance{background-position:0% 100%}
+.art-scriptures{background-position:50% 100%}
+.collection-card:before{background:linear-gradient(180deg,transparent 38%,rgba(0,0,0,.15) 58%,rgba(0,0,0,.6) 100%)}
+.collection-art{inset:0!important;top:0!important;right:0!important;bottom:0!important;left:0!important;width:100%;height:100%;display:block;border-radius:inherit;z-index:-2;background-size:300% 300%;text-shadow:none;opacity:1}
+.collection-card.krishna:before,.collection-card.rama:before,.collection-card.shiva:before,.collection-card.devi:before,.collection-card.ganesha:before,.collection-card.keerthana:before{background:linear-gradient(180deg,rgba(12,25,14,.02) 18%,rgba(8,28,16,.10) 42%,rgba(0,0,0,.76) 100%)}
+.page-hero{position:relative;min-height:320px;padding:54px max(6vw,24px);padding-right:42vw;overflow:hidden;background:linear-gradient(105deg,#fff0d8 0%,#fff0d8 54%,#f6e3c1 100%)}
+.page-hero-art{position:absolute;right:max(5vw,24px);top:9%;width:33%;height:82%;border-radius:18px;box-shadow:0 14px 32px rgba(73,48,15,.16);background-size:300% 300%;border:1px solid rgba(190,139,65,.28)}
+.page-hero .breadcrumbs,.page-hero .eyebrow,.page-hero h1,.page-hero>p:not(.eyebrow),.page-hero .song-meta{position:relative;z-index:1}
+.page-hero h1{max-width:700px}
+.page-hero>p:not(.eyebrow){max-width:680px}
+.lyrics-hero .page-hero-art{width:28%;right:7%;height:76%}
+.featured-art>.devotional-sprite{width:100%;height:100%;background-size:300% 300%;border-radius:inherit}
+.about-photo>.devotional-sprite{width:100%;height:100%;background-size:300% 300%}
+.about-hero-image>.devotional-sprite{width:100%;height:100%;min-height:300px;border-radius:18px;background-size:300% 300%}
+.about-what-image>.devotional-sprite{width:100%;height:100%;min-height:230px;border-radius:16px;background-size:300% 300%}
+@media(max-width:650px){
+ .page-hero{padding:28px 22px 22px;min-height:0}
+ .page-hero-art,.lyrics-hero .page-hero-art{position:relative;right:auto;top:auto;width:100%;height:190px;margin-top:18px;border-radius:14px}
+ .about-hero-image>.devotional-sprite{min-height:220px}
+ .about-what-image>.devotional-sprite{min-height:190px}
+}
