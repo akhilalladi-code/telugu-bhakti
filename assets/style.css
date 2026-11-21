@@ -112,3 +112,35 @@ body{font-family:'Anek Telugu','DM Sans',sans-serif;letter-spacing:0}
  .featured-song-main strong{font-size:23px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Homepage hero artwork and header readability repair */
+.site-header{min-height:78px;height:auto;padding:10px max(6vw,24px);gap:24px}
+.brand{font-size:18px;flex-shrink:0}
+.brand-mark{width:44px;height:44px;font-size:25px;background:#fffaf0}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.5vw,32px);font-size:14px;white-space:nowrap}
+.nav a{font-family:'Anek Telugu',sans-serif;font-size:14px;line-height:1.5}
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:center;gap:5vw}
+.hero-art{height:auto;min-height:360px;aspect-ratio:760/540;position:relative;display:block;overflow:hidden;border:1px solid #d7bd93;border-radius:5px;background:#f1dfbd;box-shadow:0 18px 45px rgba(77,55,30,.12)}
+.hero-art img{display:block;width:100%;height:100%;min-height:360px;object-fit:cover}
+.hero-art-caption{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:30px 20px 20px;pointer-events:none;text-align:center;background:linear-gradient(180deg,rgba(255,247,224,.48),transparent 40%,rgba(30,57,43,.03))}
+.hero-art-caption span{font-family:'Anek Telugu',sans-serif;font-size:15px;font-weight:600;letter-spacing:.06em;color:#34513d;text-shadow:0 1px 8px rgba(255,248,230,.85)}
+.hero-art-caption strong{margin:auto 0;font-family:'Anek Telugu',sans-serif;font-size:clamp(64px,8vw,112px);line-height:1;color:#a85f35;text-shadow:0 2px 0 rgba(255,244,219,.5)}
+.hero-art-caption small{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:2.2px;color:#38533f;background:rgba(255,246,222,.72);padding:7px 12px;border-radius:30px}
+.hero h1{font-size:clamp(42px,5.2vw,68px);line-height:1.42}
+.hero-lede{font-size:20px;line-height:1.9}
+@media(max-width:760px){
+ .site-header{padding:10px 6vw;min-height:70px}
+ .nav{white-space:normal}
+ .nav a{font-size:15px}
+ .hero{grid-template-columns:1fr}
+ .hero-art{min-height:0;aspect-ratio:760/500}
+ .hero-art img{min-height:0}
+ .hero-art-caption{padding-top:22px}
+ .hero-art-caption strong{font-size:76px}
+}
+@media(max-width:480px){
+ .site-header{gap:12px}
+ .brand{font-size:16px}
+ .hero-art-caption span{font-size:12px}
+ .hero-art-caption small{font-size:7px;letter-spacing:1.4px}
+}
