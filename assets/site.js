@@ -36,7 +36,7 @@ if(searchInput&&searchResults&&searchStatus){
   let songs=[];
   fetch('data/songs.json')
     .then(response=>{if(!response.ok)throw new Error('Song index unavailable');return response.json();})
-    .then(data=>{songs=Array.isArray(data)?data:[];searchStatus.textContent=songs.length? `${songs.length} పాట అందుబాటులో ఉంది. వెతకడం ప్రారంభించండి.`:'ప్రస్తుతం పాటలు అందుబాటులో లేవు.';})
+    .then(data=>{songs=Array.isArray(data)?data:[];searchStatus.textContent=songs.length? `${songs.length} పాట అందుబాటులో ఉంది. వెతకడం ప్రారంభించండి.`:'ప్రస్తుతం పాటలు అందుబాటులో లేవు.';render();render();})
     .catch(()=>{searchStatus.textContent='పాటల జాబితా లోడ్ కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.';});
   const render=()=>{
     const query=normalize(searchInput.value);
