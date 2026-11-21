@@ -199,3 +199,17 @@ body{font-family:'Anek Telugu','DM Sans',sans-serif;letter-spacing:0}
  .page-hero{min-height:300px;background:linear-gradient(90deg,rgba(247,244,236,.96),rgba(247,244,236,.76)),url('telugu-bhakti-hero.webp') center/cover no-repeat}
 }
 @media(max-width:480px){.about-hero h1{font-size:42px}.about-lede{font-size:17px}.about-hero-image{height:230px}.about-intro h2,.about-what h2,.editorial-commitment h2,.about-cta h2{font-size:28px}.about-cta{padding:60px 7vw}}
+
+
+/* Sub-collection art framing: keep the devotional image dominant without covering copy */
+.page-hero-krishna{background-position:center right}
+.page-hero-rama{background-position:58% center}
+.page-hero-shiva{background-position:72% center}
+.page-hero-devi{background-position:82% center}
+.page-hero-vinayaka{background-position:100% center}
+.page-hero-deities{background-position:65% center}
+.page-hero-stotras{background-position:40% center}
+.page-hero-bhajans{background-position:55% center}
+.page-hero:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(247,244,236,.16),transparent 80%);pointer-events:none}
+.page-hero .eyebrow{color:#9b5e2e}
+.page-hero .breadcrumbs a{text-decoration:underline;text-underline-offset:3px}
