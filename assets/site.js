@@ -1,6 +1,15 @@
 const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav');
-if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});}
+if(toggle&&nav){
+  const setMenu=(open)=>{
+    nav.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'మెనూ మూసివేయండి':'మెనూ తెరవండి');
+  };
+  toggle.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')setMenu(false);});
+}
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
 
 const copyLyricsButton=document.querySelector('[data-copy-lyrics]');
