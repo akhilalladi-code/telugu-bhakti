@@ -66,5 +66,5 @@ if(searchInput&&searchResults&&searchStatus){
     });
   };
   searchInput.addEventListener('input',render);
-  searchClear?.addEventListener('click',()=>{searchInput.value='';render();searchInput.focus();});
+  searchClear?.addEventListener('click',()=>{if(!searchInput.value.trim()){searchInput.focus();return;}render();searchInput.blur();});
 }
